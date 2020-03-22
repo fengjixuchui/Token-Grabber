@@ -1,8 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 #include <regex>    
-    
+
 using namespace std;
     size_t sz = 0;
     char* szBuf;    
