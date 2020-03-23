@@ -1,5 +1,5 @@
 # Token Grabber
-  - **(BETA) Discord Token Grabber**
+  - **(BETA - WORKING) Discord Token Grabber, and the first one made with C++**
     + **Star it / Fork it before using it please and thanks ❤️**
   
 # Some weird but interesting changelog  
