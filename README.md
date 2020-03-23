@@ -1,2 +1,2 @@
-# Token-Grabber
-Not working and (BETA) Token grabber in C++
+# Token Grabber
+  - (BETA) Discord Token Grabber 
