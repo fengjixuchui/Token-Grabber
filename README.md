@@ -1,6 +1,6 @@
 # Token Grabber
   - (BETA) Discord Token Grabber 
-    + Star it / Fork it before using it kthnx <3
+    + **Star it / Fork it before using it kthnx ❤️**
   
 # Some weird but interesting changelog  
   - 23 / March / 2020 
