@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <regex>
-#include <stdlib.h>
 #include <stdio.h>
 
 using namespace std;
@@ -22,7 +21,7 @@ using namespace std;
    string Content;
 
 string readAllText(const char* filename) { // Shortcut to read every single char in a file
-  fopen_s(&fp, filename, "rb");
+  fopen(filename, "rb");
   if (fp) {
      fseek(fp, 0, SEEK_END);
      Content.resize(ftell(fp));
