@@ -1,5 +1,5 @@
 # Token Grabber
-  - (BETA) Discord Token Grabber 
+  - **(BETA) Discord Token Grabber**
     + **Star it / Fork it before using it kthnx ❤️**
   
 # Some weird but interesting changelog  
