@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
-#include <fstream>
 #include <stdio.h>
+#include <fstream>
 #include <regex>
 
 using namespace std;
@@ -38,7 +38,7 @@ int main() { // Main function, runs everything using outside functions and varia
     try {
         string data = readAllText(levelDB.c_str());
         if (data.find(String, 0) != string::npos) {
-           regex x(Regex);
+           regex = x(Regex);
            if (regex_search(data, smatch, x) == true) {
                cout << smatch.str() << '\n';
            } else {
