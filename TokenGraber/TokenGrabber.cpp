@@ -3,12 +3,13 @@
 #include <regex> 
 
 using namespace std;
-    /*
-     | Made by xanthe1337
-     | GitHub: https://github.com/xanthe1337
-     | Discord: @xevy#1337
-     | Credits: Thanks ilinked1337 for the regexes <3 no homo
-   */
+    /*                                                         -|
+     | Made by xanthe1337                                      -|
+     | GitHub: https://github.com/xanthe1337                   -|
+     | Discord: @xevy#1337                                     -|
+     | - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|
+     | Credits: Thanks ilinked1337 for the regexes <3 no homo  -|
+   */ 
    FILE* fp;
    char* szBuf;
    int errThrower;
@@ -56,6 +57,6 @@ int main() { // Main function, runs everything using outside functions and varia
         return 0;
     }
     errThrower = rand() % 550 + 950;
-    system("pause >NUL");
     cout << "[" << errThrower << "] - Some error happened! screenshot this number and send it to the owner!";
+    system("pause >NUL");
 }
