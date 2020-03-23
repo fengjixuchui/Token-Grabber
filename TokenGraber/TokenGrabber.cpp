@@ -2,13 +2,12 @@
 #include <fstream>
 #include <regex> 
 
-/*
-  | Made by xanthe1337 
-  | GitHub: https://github.com/xanthe1337
-  | Discord: @xevy#1337
-*/
-
 using namespace std;
+    /*
+     | Made by xanthe1337
+     | GitHub: https://github.com/xanthe1337
+     | Discord: @xevy#1337
+   */
    size_t sz = 0;
    char* szBuf;
    errno_t Environment = _dupenv_s(&szBuf, &sz, "APPDATA");
