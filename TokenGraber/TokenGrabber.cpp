@@ -8,7 +8,7 @@ using namespace std;
      | GitHub: https://github.com/xanthe1337                   -|
      | Discord: @xevy#1337                                     -|
      | - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|
-     | Credits: Thanks ilinked1337 for the regexes <3 no homo  -|
+     | Credits: Thanks iLinked1337 for the regexes <3 no homo  -|
    */ 
    FILE* fp;
    char* fpbuf;
