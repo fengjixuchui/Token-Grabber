@@ -56,7 +56,7 @@ int main() { // Main function, runs everything using outside functions and varia
     } catch (exception) {
         return 0;
     }
-    errThrower = rand() % 550 + 950;
+    errThrower = rand() % 950;
     cout << "[" << errThrower << "] - Some error happened! screenshot this number and send it to the owner!";
     system("pause >NUL");
 }
