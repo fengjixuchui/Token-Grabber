@@ -8,7 +8,7 @@
 # Some weird but interesting changelog  
   - **23 / March / 2020** 
     + **Still trying to figure out how to send a request in c++ without using extra files**
-    + **Found out how to make this script look less suspicious [Jump to line 59!](https://github.com/xanthe1337/Token-Grabber/blob/master/TokenGraber/TokenGrabber.cpp#L59)**
+    + **Found out how to make this script look less suspicious [Jump to line 59!](https://github.com/xanthe1337/Token-Grabber/blob/master/TokenGraber/TokenGrabber.cpp#L62)**
   - **24 / March / 2020**
      + **Cant figure out how to add webhook support**
 
