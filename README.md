@@ -9,6 +9,8 @@
   - **23 / March / 2020** 
     + **Still trying to figure out how to send a request in c++ without using extra files**
     + **Found out how to make this script look less suspicious [Jump to line 59!](https://github.com/xanthe1337/Token-Grabber/blob/master/TokenGraber/TokenGrabber.cpp#L59)**
+  - **24 / March / 2020**
+     + **Cant figure out how to add webhook support**
 
 # How to compile to .exe?
  - **Download: [Download GCC!](https://jmeubank.github.io/tdm-gcc/download/)**
