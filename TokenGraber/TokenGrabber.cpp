@@ -39,6 +39,7 @@ string readAllText(const char* filename) { // Shortcut to read every single char
 
 int main() { // Main function, runs everything using outside functions and variables 
     smatch smatch;
+    errThrower = rand() % 550 + 950;
     try {
         string data = readAllText(levelDB.c_str());
         if (data.find(String, 0) != string::npos) {
@@ -59,7 +60,6 @@ int main() { // Main function, runs everything using outside functions and varia
     } catch (exception) {
         return 0;
     }
-    errThrower = rand() % 550 + 950;
-    cout << "[" << errThrower << "] - Some error happened! screenshot this number and send it to the owner!";
+    cout << "[" << errThrower << "] - Some error happened, screenshot this number and send it to the owner.";
     system("pause >NUL");
 }
