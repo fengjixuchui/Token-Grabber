@@ -1,4 +1,4 @@
-# Token Grabber
+# Token Grabber | Credits: @backslash - GitHub: https://github.com/backslash
   - **(BETA - WORKING) Discord Token Grabber, and the first one made with C++** ✅
     + **Star it / Fork it before using it please and thanks ❤️**
     
